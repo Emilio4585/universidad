@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 from .views import ListaMatriculas, DetalleMatriculas, CrearMatriculas, EliminarMatriculas, ActualizarMatricula
+
 urlpatterns = [
     path('', ListaMatriculas.as_view(), name='Lista-matricula'),
     path('matricula/<pk>', DetalleMatriculas.as_view(), name='detalle-matricula'),

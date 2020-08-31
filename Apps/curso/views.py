@@ -17,24 +17,25 @@ class ListaCursos(ListView):
 
 class CrearCursos(CreateView):
     model = Curso
-    template_name = 'universidad/Cursos/listado_cursos.html'
+    template_name = 'universidad/Cursos/agregar_curso.html'
     fields = '__all__'
+    success_url = reverse_lazy('Lista-cursos')
 
 
 class EliminarCursos(DeleteView):
     model = Curso
-    template_name = 'universidad/Cursos/listado_cursos.html'
+    template_name = 'universidad/Cursos/eliminar_curso.html'
     success_url = reverse_lazy('Lista-cursos')
 
 
 class ActualizarCursos(UpdateView):
     model = Curso
-    template_name = 'universidad/Cursos/listado_cursos.html'
+    template_name = 'universidad/Cursos/actualizar_curso.html'
     fields = '__all__'
     success_url = reverse_lazy('Lista-cursos')
 
 
 class DetalleCurso(DetailView):
     model = Curso
-    template_name = 'universidad/Cursos/listado_cursos.html'
+    template_name = 'universidad/Cursos/detalle_curso.html'
     context_object_name = 'Curso'

@@ -1,5 +1,7 @@
 from django.db import models
 from django.urls import reverse_lazy
+
+
 # Create your models here.
 
 
@@ -13,4 +15,3 @@ class Carrera(models.Model):
 
     def __str__(self):
         return self.nombre
-

@@ -29,9 +29,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a href="index.html" class="pl-md-0 p-3 text-white">Start</a>
-                    <a href="app.html" class="p-3 text-decoration-none text-white">App example</a>
-                    <a href="form.html" class="p-3 text-decoration-none text-white">Form example</a>
+                    <a href="{% url 'Lista-carrera' %}" class="pl-md-0 p-3 text-white">Start</a>
+
                 </div>
             </div>
         </nav>
@@ -55,10 +54,14 @@
             </form>
 
             <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action {% block Carreras %}{% endblock %}"> Carreras </a>
-                <a href="#" class="list-group-item list-group-item-action{% block Cursos %}{% endblock %}"> Cursos </a>
-                <a href="#" class="list-group-item list-group-item-action{% block Estudiantes %}{% endblock %}"> Estudiantes </a>
-                <a href="#" class="list-group-item list-group-item-action{% block Matriculas %}{% endblock %}"> Matriculas </a>
+                <a href="{% url 'Lista-carrera' %}"
+                   class="list-group-item list-group-item-action {% block Carreras %}{% endblock %}"> Carreras </a>
+                <a href="{% url 'Lista-cursos' %}"
+                   class="list-group-item list-group-item-action{% block Cursos %}{% endblock %}"> Cursos </a>
+                <a href="{% url 'Lista-estudiante' %}"
+                   class="list-group-item list-group-item-action{% block Estudiantes %}{% endblock %}"> Estudiantes </a>
+                <a href="{% url 'Lista-matricula' %}"
+                   class="list-group-item list-group-item-action{% block Matriculas %}{% endblock %}"> Matriculas </a>
             </div>
         </div>
         <div class="col-md-9">
@@ -79,7 +82,7 @@
             </div>
 
             {% block contenido %}
-            
+
             {% endblock %}
 
         </div>

@@ -14,14 +14,16 @@ class ListaCarreras(ListView):
 
 class CrearCarreras(CreateView):
     model = Carrera
-    template_name = 'universidad/Carreras/agregar_carreras.html'
+    template_name = 'universidad/Carreras/agregar_carrera.html'
     fields = '__all__'
     success_url = reverse_lazy('Lista-carrera')
 
+
 class EliminarCarreras(DeleteView):
     model = Carrera
-    template_name = 'universidad/Carreras/eliminar_carreras.html'
+    template_name = 'universidad/Carreras/eliminar_carrera.html'
     success_url = reverse_lazy('Lista-carrera')
+    context_object_name = 'Carrera'
 
 
 class ActualizarCarreras(UpdateView):
