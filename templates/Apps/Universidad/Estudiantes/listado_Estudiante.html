@@ -1,0 +1,51 @@
+{% extends 'Apps/Universidad/bases/base_listado.html' %}
+{% block titulo %}
+    Estudiantes
+{% endblock %}
+{% block Estudiantes %}
+    active
+{% endblock %}
+{% block contenido %}
+    <a href="{% url 'agregar-estudiante' %}"><button type="button" class="btn btn-primary btn-lg" >Agregar</button></a>
+
+    <table class="table">
+        <thead class="thead-light">
+        <tr>
+            <th scope="col">Dni</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido Paterno</th>
+            <th scope="col">Codigo Carrera</th>
+            <th scope="col">Actions</th>
+        </tr>
+        </thead>
+        {% for estudiante in Estudiantes %}
+            <tbody>
+            <tr>
+                <th scope="row">{{ estudiante.dni }}</th>
+                <td>
+                    {{ estudiante.nombres }}
+                </td>
+                <td>
+                    {{ estudiante.apellidoPaterno }}
+                </td>
+                <td>
+                    {{ estudiante.codigoCarrera.codigo }}
+                </td>
+                <td>
+                    <a href="{% url 'actualiza-estudiante' estudiante.dni %}"
+                       class="btn btn-sm btn-primary my-1 my-sm-0">
+                        <span class="fas fa-edit mr-1"></span>
+                        Actualizar</a>
+                    <a href="{% url 'elimina-estudiante' estudiante.dni %}" class="btn btn-sm btn-danger my-1 my-sm-0">
+                        <span class="fas fa-trash mr-1"></span>
+                        Eliminar</a>
+                </td>
+            </tr>
+            </tbody>
+        {% empty %}
+            <div class="alert alert-danger" role="alert">
+                <strong>Oh snap!</strong> No hay registros en la base de datos.
+            </div>
+        {% endfor %}
+    </table>
+{% endblock %}

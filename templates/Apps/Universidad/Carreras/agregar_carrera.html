@@ -1,0 +1,11 @@
+{% extends 'Apps/Universidad/bases/base_form.html' %}
+{% block url %}
+{% url 'carrera:lista' %}
+{% endblock %}
+{% block contenido %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type='submit' value="Guardar">
+    </form>
+{% endblock %}

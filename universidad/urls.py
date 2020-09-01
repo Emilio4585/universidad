@@ -20,8 +20,5 @@ from django.urls import path, include
 
 urlpatterns = [
                   path('admin/', admin.site.urls),
-                  path('carreras/', include('Apps.carrera.urls'), name='carreras'),
-                  path('cursos/', include('Apps.curso.urls'), name='cursos'),
-                  path('estudiantes/', include('Apps.estudiante.urls'), name='estudiantes'),
-                  path('matriculas/', include('Apps.matricula.urls'), name='matriculas'),
+                  path('universidad/', include('Apps.College-Crud.urls', namespace='universidad')),
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -1,9 +1,0 @@
-{% extends 'universidad/bases/base_form.html' %}
-{% block contenido %}
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <h1>Desea eliminar el Estudiante?</h1>
-        <input type='submit' value="Eliminar">
-    </form>
-{% endblock %}
