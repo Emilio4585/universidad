@@ -6,7 +6,7 @@
     active
 {% endblock %}
 {% block contenido %}
-    <a href="{% url 'agregar-curso' %}"><button type="button" class="btn btn-primary btn-lg" >Agregar</button></a>
+    <a href="{% url 'cursos:agregar' %}"><button type="button" class="btn btn-success" >Agregar</button></a>
     <table class="table">
         <thead class="thead-light">
         <tr>
@@ -31,10 +31,10 @@
                     {{ curso.docente }}
                 </td>
                 <td>
-                    <a href="{% url 'actualiza-curso' curso.codigo %}" class="btn btn-sm btn-primary my-1 my-sm-0">
+                    <a href="{% url 'cursos:actualizar' curso.codigo %}" class="btn btn-sm btn-primary my-1 my-sm-0">
                         <span class="fas fa-edit mr-1"></span>
                         Actualizar</a>
-                    <a href="{% url 'elimina-curso' curso.codigo %}" class="btn btn-sm btn-danger my-1 my-sm-0">
+                    <a href="{% url 'cursos:eliminar' curso.codigo %}" class="btn btn-sm btn-danger my-1 my-sm-0">
                         <span class="fas fa-trash mr-1"></span>
                         Eliminar</a>
                 </td>

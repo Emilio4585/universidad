@@ -16,13 +16,13 @@ class CrearCarreras(CreateView):
     model = Carrera
     template_name = 'Apps/Universidad/Carreras/agregar_carrera.html'
     fields = '__all__'
-    success_url = reverse_lazy('carrera:lista')
+    success_url = reverse_lazy('carreras:lista')
 
 
 class EliminarCarreras(DeleteView):
     model = Carrera
     template_name = 'Apps/Universidad/Carreras/eliminar_carrera.html'
-    success_url = reverse_lazy('carrera:lista')
+    success_url = reverse_lazy('carreras:lista')
     context_object_name = 'Carrera'
 
 
@@ -30,7 +30,7 @@ class ActualizarCarreras(UpdateView):
     model = Carrera
     template_name = 'Apps/Universidad/Carreras/actualizar_carrera.html'
     fields = '__all__'
-    success_url = reverse_lazy('carrera:lista')
+    success_url = reverse_lazy('carreras:lista')
 
 
 class DetalleCarrera(DetailView):

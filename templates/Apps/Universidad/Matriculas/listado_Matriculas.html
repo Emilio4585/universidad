@@ -6,7 +6,7 @@
     active
 {% endblock %}
 {% block contenido %}
-    <a href="{% url 'agregar-matricula' %}"><button type="button" class="btn btn-primary btn-lg" >Agregar</button></a>
+    <a href="{% url 'matriculas:agregar' %}"><button type="button" class="btn btn-success" >Agregar</button></a>
     <table class="table">
         <thead class="thead-light">
         <tr>
@@ -32,10 +32,10 @@
                     {{ matricula.fecha_matricula }}
                 </td>
                 <td>
-                    <a href="{% url 'actualiza-matricula' matricula.id %}" class="btn btn-sm btn-primary my-1 my-sm-0">
+                    <a href="{% url 'matriculas:actualizar' matricula.id %}" class="btn btn-sm btn-primary my-1 my-sm-0">
                         <span class="fas fa-edit mr-1"></span>
                         Actualizar</a>
-                    <a href="{% url 'elimina-matricula' matricula.id %}" class="btn btn-sm btn-danger my-1 my-sm-0">
+                    <a href="{% url 'matriculas:eliminar' matricula.id %}" class="btn btn-sm btn-danger my-1 my-sm-0">
                         <span class="fas fa-trash mr-1"></span>
                         Eliminar</a>
                 </td>

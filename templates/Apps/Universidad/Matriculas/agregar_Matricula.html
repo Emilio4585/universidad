@@ -1,5 +1,8 @@
 {% extends 'Apps/Universidad/bases/base_form.html' %}
 {% block url %}
+{% url 'matriculas:lista' %}
+{% endblock %}
+{% block url %}
 {% url 'Lista-matricula' %}
 {% endblock %}
 {% block contenido %}

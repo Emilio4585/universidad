@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block contenido %}
-    <a href="{% url 'carrera:agregar' %}"><button type="button" class="btn btn-primary btn-lg" >Agregar</button></a>
+    <a href="{% url 'carreras:agregar' %}"><button type="button" class="btn btn-success"" >Agregar</button></a>
     <table class="table">
         <thead class="thead-light">
         <tr>
@@ -22,7 +22,7 @@
             <tr>
                 <th scope="row">{{ carrera.codigo }}</th>
                 <td>
-                    <a href="{% url 'carrera:detalle' carrera.codigo %}">
+                    <a href="{% url 'carreras:detalle' carrera.codigo %}">
                         {{ carrera.nombre }}
                     </a>
                 </td>
@@ -30,10 +30,10 @@
                     {{ carrera.duracion }}
                 </td>
                 <td>
-                    <a href="{% url 'carrera:actualiza' carrera.codigo %}" class="btn btn-sm btn-primary my-1 my-sm-0">
+                    <a href="{% url 'carreras:actualizar' carrera.codigo %}" class="btn btn-sm btn-primary my-1 my-sm-0">
                         <span class="fas fa-edit mr-1"></span>
                         Actualizar</a>
-                    <a href="{% url 'carrera:elimina' carrera.codigo %}" class="btn btn-sm btn-danger my-1 my-sm-0">
+                    <a href="{% url 'carreras:eliminar' carrera.codigo %}" class="btn btn-sm btn-danger my-1 my-sm-0">
                         <span class="fas fa-trash mr-1"></span>
                         Eliminar</a>
                 </td>

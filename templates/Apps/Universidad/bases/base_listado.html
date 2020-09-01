@@ -48,19 +48,19 @@
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Buscar">
                     <div class="input-group-append">
-                        <button type="submit" class="btn btn-primary">Buscar</button>
+                        <button type="submit" class="btn btn-success">Buscar</button>
                     </div>
                 </div>
             </form>
 
             <div class="list-group">
-                <a href="{% url 'Lista-carrera' %}"
+                <a href="{% url 'carreras:lista' %}"
                    class="list-group-item list-group-item-action {% block Carreras %}{% endblock %}"> Carreras </a>
-                <a href="{% url 'Lista-cursos' %}"
+                <a href="{% url 'cursos:lista' %}"
                    class="list-group-item list-group-item-action{% block Cursos %}{% endblock %}"> Cursos </a>
-                <a href="{% url 'Lista-estudiante' %}"
+                <a href="{% url 'estudiantes:lista' %}"
                    class="list-group-item list-group-item-action{% block Estudiantes %}{% endblock %}"> Estudiantes </a>
-                <a href="{% url 'Lista-matricula' %}"
+                <a href="{% url 'matriculas:lista' %}"
                    class="list-group-item list-group-item-action{% block Matriculas %}{% endblock %}"> Matriculas </a>
             </div>
         </div>
